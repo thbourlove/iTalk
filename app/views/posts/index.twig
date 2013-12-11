@@ -1,0 +1,43 @@
+{% extends 'layouts/base.twig' %}
+{% block title %}iTalk{% endblock %}
+{% block bar %}
+    <div class="box">
+        <div id="step">
+            <big>流程：</big>
+            <p>1. xxx</p>
+            <p>2. xxx</p>
+            <p>3. xxx</p>
+        </div>
+    </div>
+    <div class="box">
+        <div id="care">
+            <big>注意：</big>
+            <p>1. xxx</p>
+            <p>2. xxx</p>
+            <p>3. xxx</p>
+        </div>
+    </div>
+{% endblock %}
+
+{% block main %}
+    <div class="box">
+        {% for post in posts %}
+            <div class="post">
+                <img src="{{ post.user.getAvatar }}">
+                <a href="/post/{{ post.id }}">{{ post.title }}</a>
+                <small class="small">{{ post.user.name }} @{{ post.created_at }}</small>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="box">
+        <div class="form">
+            <img src="{{ auth_user().getAvatar }}">
+            <form id="post-form" action="/post" method="POST" accept-charset="utf-8">
+                <input class="text" type="text" name="title" value="">
+                <textarea name="content"></textarea>
+                <input class="submit" type="submit" value="发帖">
+            </form>
+        </div>
+    </div>
+{% endblock %}

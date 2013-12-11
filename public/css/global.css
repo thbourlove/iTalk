@@ -1,0 +1,222 @@
+html, body, header, menu, div, a, p, img, h1, textarea, form, input {
+    padding: 0px;
+    margin: 0px;
+    display: block;
+}
+
+a {
+    text-shadow: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", STHeiti !important;
+    background: #f0f0f0;
+}
+
+header {
+    background: #000;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+menu {
+    clear: both;
+    display: table;
+    background: #000;
+}
+
+menu a {
+    line-height: 40px;
+    padding: 0px 20px;
+    color: #fff;
+    text-shadow: none;
+    text-decoration: none;
+}
+
+menu a:focus, menu a:hover {
+    background: #777;
+}
+
+li {
+    padding: 0px;
+    margin: 0px;
+    display: block;
+    float: left;
+}
+
+img {
+    float: left;
+}
+
+p {
+    font-size: 16px;
+    line-height: 180%;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-size: 12px;
+}
+
+textarea {
+    resize: none;
+    outline: 0px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    width: 550px;
+    height: 80px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+small {
+    color: #ccc;
+    display: block;
+}
+
+.bar {
+    float: right;
+    width: 320px;
+}
+
+#step {
+    padding: 10px;
+}
+
+#care {
+    padding: 10px;
+}
+
+.main {
+    width: 640px;
+}
+
+.content {
+    margin: 0px auto;
+    width: 980px;
+}
+
+.box {
+    background: #fff;
+    margin-bottom: 10px;
+}
+
+#post .header {
+    padding: 10px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+#post .header small {
+    padding: 10px 0px 0px 0px;
+}
+
+#post .header h1 {
+    font-size: 30px;
+    line-height: 40px;
+    min-height: 80px;
+    word-wrap: break-word;
+    word-break: break-all;
+    padding: 0px 0px 0px 90px;
+}
+
+#post .header img {
+    height: 80px;
+    width: 80px;
+}
+
+#post .header p {
+}
+
+#post .cell {
+    padding: 10px;
+}
+
+.comment {
+    padding: 10px 10px;
+    min-height: 48px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.comment img {
+    height: 48px;
+    width: 48px;
+}
+
+.comment p {
+    padding: 0px 0px 0px 58px;
+}
+
+.comment small {
+    padding: 0px 0px 9px 58px;
+}
+
+.form {
+    padding: 10px 10px;
+}
+
+.form img {
+    height: 48px;
+    width: 48px;
+}
+
+#comment-form, #post-form {
+    padding-left: 58px;
+}
+
+.submit {
+    padding: 4px 10px 4px 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+}
+
+.post {
+    padding: 10px 10px;
+    min-height: 48px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.post img {
+    height: 48px;
+    width: 48px;
+}
+
+.post a {
+    color: #777;
+    padding: 0px 0px 9px 58px;
+}
+
+.post small {
+    padding: 0px 0px 0px 58px;
+}
+
+.post a:focus, .post a:hover {
+    color: #333;
+}
+
+.text {
+    font-size: 16px;
+    border: 1px solid #ccc;
+    width: 550px;
+    height: 20px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+#login-form .text{
+    width: 50%;
+    height: 20px;
+}
+
+#register-form .text{
+    width: 50%;
+    height: 20px;
+}
