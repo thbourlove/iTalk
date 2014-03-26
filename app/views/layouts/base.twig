@@ -12,24 +12,24 @@
                 <a href="/">首页</a>
             </li>
             {% if auth_check() %}
-                <li>
-                    <a href="/logout">登出</a>
-                </li>
+            <li>
+                <a href="/logout">登出</a>
+            </li>
             {% else %}
-                <li>
-                    <a href="/login">登录</a>
-                </li>
+            <li>
+                <a href="/login">登录</a>
+            </li>
             {% endif %}
         </menu>
     </header>
     <div class="content">
         {% block content %}
-            <div class="bar">
-                {% block bar %}{% endblock %}
-            </div>
-            <div class="main">
-                {% block main %}{% endblock %}
-            </div>
+        <div class="bar">
+            {% block bar %}{% endblock %}
+        </div>
+        <div class="main">
+            {% block main %}{% endblock %}
+        </div>
         {% endblock %}
     </div>
 </body>

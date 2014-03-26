@@ -1,57 +1,57 @@
 {% extends 'layouts/base.twig' %}
 {% block title %}{{ post.title }}{% endblock %}
 {% block bar %}
-    <div class="box">
-        <div id="step">
-            <big>流程：</big>
-            <p>1. xxx</p>
-            <p>2. xxx</p>
-            <p>3. xxx</p>
-        </div>
+<div class="box">
+    <div id="step">
+        <big>流程：</big>
+        <p>1. xxx</p>
+        <p>2. xxx</p>
+        <p>3. xxx</p>
     </div>
-    <div class="box">
-        <div id="care">
-            <big>注意：</big>
-            <p>1. xxx</p>
-            <p>2. xxx</p>
-            <p>3. xxx</p>
-        </div>
+</div>
+<div class="box">
+    <div id="care">
+        <big>注意：</big>
+        <p>1. xxx</p>
+        <p>2. xxx</p>
+        <p>3. xxx</p>
     </div>
+</div>
 {% endblock %}
 
 {% block main %}
-    <div class="box">
-        <div id="post">
-            <div class="header">
-                <img src="{{ post.user.getAvatar }}">
-                <h1>{{ post.title }}</h1>
-                <small class="small">{{ post.user.name }} @{{ post.created_at }}</small>
-            </div>
-            <div class="cell">
-                <p>{{ post.content|nl2br }}</p>
-            </div>
+<div class="box">
+    <div id="post">
+        <div class="header">
+            <img src="{{ post.user.getAvatar }}">
+            <h1>{{ post.title }}</h1>
+            <small class="small">{{ post.user.name }} @{{ post.created_at }}</small>
+        </div>
+        <div class="cell">
+            <p>{{ post.content|nl2br }}</p>
         </div>
     </div>
+</div>
 
-    <div class="box">
-        {% for comment in post.comments %}
-            <div class="comment">
-                <img src="{{ comment.user.getAvatar }}">
-                <small class="small">{{ comment.user.name }} @{{ comment.created_at }}</small>
-                <p>{{ comment.text|nl2br }}</p>
-            </div>
-        {% endfor %}
+<div class="box">
+    {% for comment in post.comments %}
+    <div class="comment">
+        <img src="{{ comment.user.getAvatar }}">
+        <small class="small">{{ comment.user.name }} @{{ comment.created_at }}</small>
+        <p>{{ comment.text|nl2br }}</p>
     </div>
+    {% endfor %}
+</div>
 
-    <div class="box">
-        <div class="form">
-            <img src="{{ auth_user().getAvatar }}">
-            <form id="comment-form" action="/comment" method="POST" accept-charset="utf-8">
-                <input type="hidden" name="post" value="{{ post.id }}">
-                <input type="hidden" name="comment" value="">
-                <textarea name="text"></textarea>
-                <input class="submit" type="submit" value="回应">
-            </form>
-        </div>
+<div class="box">
+    <div class="form">
+        <img src="{{ auth_user().getAvatar }}">
+        <form id="comment-form" action="/comment" method="POST" accept-charset="utf-8">
+            <input type="hidden" name="post" value="{{ post.id }}">
+            <input type="hidden" name="comment" value="">
+            <textarea name="text"></textarea>
+            <input class="submit" type="submit" value="回应">
+        </form>
     </div>
+</div>
 {% endblock %}
