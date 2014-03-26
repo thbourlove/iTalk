@@ -5,8 +5,10 @@
     "license": "MIT",
     "require": {
         "laravel/framework": "4.0.*",
-        "raveren/kint": "dev-master",
         "rcrowe/twigbridge": "0.5.*"
+    },
+    "require-dev": {
+        "raveren/kint": "0.9"
     },
     "autoload": {
         "classmap": [
