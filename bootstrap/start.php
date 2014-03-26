@@ -28,7 +28,7 @@ $app->redirectIfTrailingSlash();
 
 $env = $app->detectEnvironment(array(
 
-    'local' => array('precise64'),
+    'local' => array('vagrant-ubuntu-saucy-64'),
     'production' => array('www.thbourlove.com'),
 
 ));
